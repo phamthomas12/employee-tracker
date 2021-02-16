@@ -50,14 +50,3 @@ INSERT INTO department (id, name)
 VALUES (1, "Boss");
 INSERT INTO department (id, name)
 VALUES (2, "Production");
-
-
-SELECT employee.id AS `ID`, CONCAT_WS(', ', employee.last_name, employee.first_name) AS `Name`, role.title AS `Role`, role.salary AS `Salary`, department.name AS `Department`, CONCAT_WS(', ', managerInfo.last_name, managerInfo.first_name) AS `Manager`
-FROM employee
-RIGHT JOIN role ON employee.role_id = role.id
-LEFT JOIN department on role.department_id = department.id
-LEFT JOIN employee AS managerInfo on employee.manager_id = managerInfo.id;
-
-SELECT role.id AS `ID`,  role.title AS `Role`, role.salary AS `Salary`, department.name AS `Department`
-FROM role
-INNER JOIN department on role.department_id = department.id;
