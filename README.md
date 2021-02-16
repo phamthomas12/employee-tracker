@@ -1,3 +1,5 @@
+![License Badge](https://img.shields.io/badge/License-MIT-BLUE)
+
 # employee-tracker
 
 ## Table of Contents
@@ -13,7 +15,7 @@ Techonologies utilised :  Node.js, inquirer and mySQL.
 
 1. Clone package from repository
 2. Inside package directory run "npm install" in command line
-3. enter "npm start" in command line
+3. Enter "npm start" in command line
 4. You should then see the following
 <img src="/assets/employee-tracker-front.PNG">
 
