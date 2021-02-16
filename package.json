@@ -1,16 +1,17 @@
 {
   "name": "employee-tracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "An application that allows for easier mamagement of a company's employess.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/phamthomas12/employee-tracker.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/phamthomas12/employee-tracker#readme",
   "dependencies": {
+    "console.table": "^0.10.0",
+    "dotenv": "^8.2.0",
     "inquirer": "^7.3.3",
     "mysql": "^2.18.1"
   }
