@@ -18,6 +18,19 @@ function askFirstQuestion() {
             case "Update Employee Role":
                 updateEmployeeRole();
             break;
+            case "Add Department":
+                addDepartment();
+            break;
+            case "View Department":
+                viewDepartment();
+            break;
+            case "View Role":
+                viewRole();
+            break;
+            case "Add Role":
+                addRole();
+            break;
+            
         }
     })
 };
@@ -88,4 +101,52 @@ function updateEmployeeRole() {
             );
         }
     )
+}
+
+function viewDepartment() {
+    connection.query(
+        `SELECT id, name FROM employeetracker.department`,
+        function (err, result) {
+            if (err) throw err;
+            console.table(result);
+            askFirstQuestion();
+        }
+    )
+}
+
+function addDepartment() {
+    inquirer.prompt(questions.addDepartment).then(function (answer) {
+    connection.query(
+        "INSERT INTO `employeetracker`.`department` (`name`, `id`) VALUES ('" + answer.deptName + "', '" + answer.deptID + "');",
+            function (err, result) {
+                if (err) throw err;
+                console.table(result);
+                askFirstQuestion();
+            }
+        )
+    })
+}
+
+function viewRole() {
+    connection.query(
+        `SELECT id, title, salary, department_id FROM employeetracker.role`,
+        function (err, result) {
+            if (err) throw err;
+            console.table(result);
+            askFirstQuestion();
+        }
+    )
+}
+
+function addRole() {
+    inquirer.prompt(questions.addRole).then(function (answer) {
+    connection.query(
+        "INSERT INTO `employeetracker`.`role` (`id`, `title`, `salary`, `department_id`) VALUES ('" + answer.roleID + "', '" + answer.roleTitle + "', '" + answer.roleSalary + "', '" + answer.roleDeptID + "');",
+            function (err, result) {
+                if (err) throw err;
+                console.table(result);
+                askFirstQuestion();
+            }
+        )
+    })
 }

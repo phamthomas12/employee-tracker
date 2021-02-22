@@ -1,7 +1,7 @@
 {
   "name": "employee-tracker",
   "version": "1.0.0",
-  "description": "An application that allows for easier mamagement of a company's employess.",
+  "description": "An application that allows for easier mamagement of a company's employees.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

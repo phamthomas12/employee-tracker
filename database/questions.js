@@ -8,6 +8,10 @@ const firstQuestion = [
             "Add Employee",
             "Remove Employee",
             "Update Employee Role",
+            "View Departments",
+            "Add Department",
+            "View Roles",
+            "Add Role",
         ]
     }
 ];
@@ -46,7 +50,7 @@ const updateEmployeeRole = [
         name: "newRole",
         type: "input",
         message: "Enter the ID of the Employee's new role.",
-    }
+    },
 ];
 
 const removeEmployee = [
@@ -55,10 +59,47 @@ const removeEmployee = [
         type: "input",
         message: "Enter the Employee's ID that you want to remove."
     }
-]
+];
 
+const addDepartment = [
+    {
+        name: "deptName",
+        type: "input",
+        message: "What is the name of the department?"
+    },
+    {
+        name: "deptID",
+        type: "input",
+        message: "Enter the Department ID"
+    },
+];
+
+const addRole = [
+    {
+        name: "roleTitle",
+        type: "input",
+        message: "What is the name of the role?"
+    },
+    {
+        name: "roleSalary",
+        type: "input",
+        message: "Enter the Salary for this Role?"
+    },
+    {
+        name: "roleDeptID",
+        type: "input",
+        message: "What is the Department ID for this Role?"
+    },
+    {
+        name: "roleID",
+        type: "input",
+        message: "What is ID for this Role?"
+    },
+];
 
 module.exports.firstQuestion = firstQuestion;
 module.exports.addEmployeeQuestion = addEmployeeQuestion;
 module.exports.updateEmployeeRole = updateEmployeeRole;
 module.exports.removeEmployee = removeEmployee;
+module.exports.addDepartment = addDepartment;
+module.exports.addRole = addRole;
