@@ -4,12 +4,16 @@
 
 ## Table of Contents
 [Description](#Description) <br>
+[Demo] (#Demo) <br>
 [Installation](#Installation) <br>
 
 ## Description
 An application that allows for easier mamagement of a company's employees.
 
 Techonologies utilised :  Node.js, inquirer and mySQL.
+
+## Demo
+Link: https://drive.google.com/file/d/1V1WVM8i2fojAOVCWGW6ZZVf8_i2_DWp8/view
 
 ## Installation
 
