@@ -21,10 +21,10 @@ function askFirstQuestion() {
             case "Add Department":
                 addDepartment();
             break;
-            case "View Department":
+            case "View Departments":
                 viewDepartment();
             break;
-            case "View Role":
+            case "View Roles":
                 viewRole();
             break;
             case "Add Role":
